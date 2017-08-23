@@ -1,10 +1,10 @@
 FROM alpine:3.5
 
-MAINTAINER fehguy
+MAINTAINER hettling
 
 ENV VERSION "v2.2.10"
 ENV FOLDER "swagger-ui-2.2.10"
-ENV API_URL "http://petstore.swagger.io/v2/swagger.json"
+ENV API_URL "http://localhost:8080/v2/swagger.json"
 ENV API_KEY "**None**"
 ENV OAUTH_CLIENT_ID "**None**"
 ENV OAUTH_CLIENT_SECRET "**None**"
