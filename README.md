@@ -1,3 +1,6 @@
+**This is a fork from https://github.com/swagger-api/swagger-ui in order to customise the look of the generated API reference documentation for the endpoints and models of the Naturalis Biodiversity API (NBA)**
+
+
 # Swagger UI
 
 [![NPM version](https://badge.fury.io/js/swagger-ui.svg)](http://badge.fury.io/js/swagger-ui)
