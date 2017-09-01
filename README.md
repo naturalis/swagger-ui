@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/naturalis/swagger-ui.svg?branch=master)](https://travis-ci.org/naturalis/swagger-ui)
+
 **This is a fork from https://github.com/swagger-api/swagger-ui in order to customise the look of the generated API reference documentation for the endpoints and models of the Naturalis Biodiversity API (NBA).**
 
 
