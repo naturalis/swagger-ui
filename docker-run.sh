@@ -30,6 +30,18 @@ if [ "$OAUTH_ADDITIONAL_PARAMS" != "**None**" ]; then
     replace_in_index "additionalQueryStringParams: {}" "additionalQueryStringParams: {$OAUTH_ADDITIONAL_PARAMS}"
 fi
 
+## Instead of passing the swagger definition URL to swagger directly, 
+## we will download it and pass it as file. 
+## This is because e.g. wildfly security settings can get into the way; 
+## altough a file from a shielded server can be downloadable, swagger might
+## not accept it
+if [[ ! -f $SWAGGER_JSON ]]; then
+  if [[ ! -e /app ]]; then
+    mkdir /app
+  fi	
+  wget -O /app/swagger.json $API_URL
+fi
+
 if [[ -f $SWAGGER_JSON ]]; then
   cp $SWAGGER_JSON $NGINX_ROOT
   REL_PATH="/$(basename $SWAGGER_JSON)"
