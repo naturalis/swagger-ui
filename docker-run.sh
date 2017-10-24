@@ -40,6 +40,8 @@ if [[ ! -f $SWAGGER_JSON ]]; then
     mkdir /app
   fi	
   wget -O /app/swagger.json $API_URL
+  ## Set port manually to what was defined in NBA_PORT
+  sed  -i -e "s/\"basePath\":\"\/v2/\"basePath\":\":${NBA_PORT}\/v2/g" /app/swagger.json
 fi
 
 if [[ -f $SWAGGER_JSON ]]; then

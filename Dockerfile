@@ -14,6 +14,9 @@ ENV OAUTH_ADDITIONAL_PARAMS "**None**"
 ENV SWAGGER_JSON "/app/swagger.json"
 ENV PORT 80
 
+## Port where the NBA runs on
+ENV NBA_PORT 8080
+	
 RUN apk add --update nginx
 RUN mkdir -p /run/nginx
 
