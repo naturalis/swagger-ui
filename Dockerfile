@@ -24,9 +24,9 @@ COPY nginx.conf /etc/nginx/
 
 
 # create swagger directory
-RUN mkdir -p /usr/share/nginx/html/swagger/
+RUN mkdir -p /usr/share/nginx/html/endpoints-reference/
 # copy swagger files to the `/js` folder
-ADD ./dist/* /usr/share/nginx/html/swagger/
+ADD ./dist/* /usr/share/nginx/html/endpoints-reference/
 ADD ./docker-run.sh /usr/share/nginx/
 
 EXPOSE 8080

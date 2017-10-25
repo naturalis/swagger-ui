@@ -2,7 +2,7 @@
 
 set -e
 
-NGINX_ROOT=/usr/share/nginx/html/swagger
+NGINX_ROOT=/usr/share/nginx/html/endpoints-reference
 INDEX_FILE=$NGINX_ROOT/index.html
 
 replace_in_index () {
