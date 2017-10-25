@@ -40,13 +40,14 @@ if [[ ! -f $SWAGGER_JSON ]]; then
     mkdir /app
   fi	
   wget -O /app/swagger.json $API_URL
-  ## Set port manually to what was defined in NBA_PORT
+  ## Set port in swagger file manually to what was defined in NBA_PORT
   sed  -i -e "s/\"basePath\":\"\/v2/\"basePath\":\":${NBA_PORT}\/v2/g" /app/swagger.json
 fi
 
 if [[ -f $SWAGGER_JSON ]]; then
   cp $SWAGGER_JSON $NGINX_ROOT
-  REL_PATH="/$(basename $SWAGGER_JSON)"
+  ## No slash before path to make it relative !!!
+  REL_PATH="$(basename $SWAGGER_JSON)"
   sed -i "s|http://petstore.swagger.io/v2/swagger.json|$REL_PATH|g" $INDEX_FILE
   sed -i "s|http://example.com/api|$REL_PATH|g" $INDEX_FILE
 else
