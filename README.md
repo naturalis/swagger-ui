@@ -9,5 +9,5 @@ environment variable `API_URL`:
 
 `docker run -p 80:8080 -e VALIDATOR_URL=null -e NBA_PORT=8080 -e API_URL=http://localhost:8080/swagger.json naturalis/swagger-ui`
 
-Open a browser and swagger-ui will run under http://localhost:80 
+Open a browser and swagger-ui will run under http://localhost/swagger 
 Note that validation of the API definition is disabled in the above example.
