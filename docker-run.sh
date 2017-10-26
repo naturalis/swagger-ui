@@ -35,14 +35,14 @@ fi
 ## This is because e.g. wildfly security settings can get into the way; 
 ## altough a file from a shielded server can be downloadable, swagger might
 ## not accept it
-if [[ ! -f $SWAGGER_JSON ]]; then
-  if [[ ! -e /app ]]; then
-    mkdir /app
-  fi	
-  wget -O /app/swagger.json $API_URL
-  ## Set port in swagger file manually to what was defined in NBA_PORT
-  sed  -i -e "s/\"basePath\":\"\/v2/\"basePath\":\"${NBA_PUBLIC_URL}/g" /app/swagger.json
-fi
+##if [[ ! -f $SWAGGER_JSON ]]; then
+##  if [[ ! -e /app ]]; then
+##    mkdir /app
+##  fi	
+##  wget -O /app/swagger.json $API_URL
+##
+##  sed  -i -e "s/\"basePath\":\"\/v2/\"basePath\":\"${NBA_PUBLIC_URL}/g" /app/swagger.json
+##fi
 
 if [[ -f $SWAGGER_JSON ]]; then
   cp $SWAGGER_JSON $NGINX_ROOT
