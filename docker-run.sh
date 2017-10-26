@@ -46,8 +46,8 @@ fi
 
 if [[ -f $SWAGGER_JSON ]]; then
   cp $SWAGGER_JSON $NGINX_ROOT
-  ## No slash before path to make it relative !!!
-  REL_PATH="$(basename $SWAGGER_JSON)"
+
+  REL_PATH="./$(basename $SWAGGER_JSON)"
   sed -i "s|http://petstore.swagger.io/v2/swagger.json|$REL_PATH|g" $INDEX_FILE
   sed -i "s|http://example.com/api|$REL_PATH|g" $INDEX_FILE
 else
