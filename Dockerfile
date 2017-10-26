@@ -13,7 +13,7 @@ ENV OAUTH_APP_NAME "**None**"
 ENV OAUTH_ADDITIONAL_PARAMS "**None**"
 ENV SWAGGER_JSON "/app/swagger.json"
 ENV PORT 80
-ENV NBA_PUBLIC_URL "api.biodiversitydata.nl/v2"
+ENV NBA_PUBLIC_URL "api.biodiversitydata.nl\/v2"
 
 	
 ## Port where the NBA runs on
