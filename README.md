@@ -7,7 +7,9 @@ API reference documentation for the endpoints and models of the Naturalis Biodiv
 In order to run, the URL at which the swagger API definition is served must be passed in the
 environment variable `API_URL`:
 
-`docker run -p 80:8080 -e VALIDATOR_URL=null -e NBA_PORT=8080 -e API_URL=http://localhost:8080/swagger.json naturalis/swagger-ui`
+`docker run -p 80:80 -e VALIDATOR_URL=null -e NBA_PORT=8080 -e API_URL=http://localhost:8080/v2/reference-doc naturalis/swagger-ui`
 
-Open a browser and swagger-ui will run under http://localhost/swagger 
+Open a browser and swagger-ui will run under http://localhost/swagger/endpoints-reference
 Note that validation of the API definition is disabled in the above example.
+** Important:** Make sure that the CORS settings for the swagger definition file served from the address specified in `API_URL` 
+has the sufficientr cross-domain access control (CORS) settings!
