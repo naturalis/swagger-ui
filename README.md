@@ -13,3 +13,4 @@ Open a browser and swagger-ui will run under http://localhost/swagger/endpoints-
 Note that validation of the API definition is disabled in the above example.
 ** Important:** Make sure that the CORS settings for the swagger definition file served from the address specified in `API_URL` 
 has the sufficientr cross-domain access control (CORS) settings!
+
