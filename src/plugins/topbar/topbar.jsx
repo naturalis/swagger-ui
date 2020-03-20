@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 //import "./topbar.less"
-import Logo from "./logo_small.png"
+import Logo from "./NBA_logo.png"
 
 export default class Topbar extends React.Component {
 
